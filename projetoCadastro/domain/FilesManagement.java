@@ -6,16 +6,22 @@ import java.util.ArrayList;
 public class FilesManagement {
     private static File userFile;
     private static File adminFile;
+    private UserInformation userInformation;
 
-    public FilesManagement(File file, File adminFile) {
+
+    public FilesManagement(File file, File adminFile, UserInformation userInformation) {
         this.userFile = file;
         this.adminFile = adminFile;
+        this.userInformation = userInformation;
         writeBaseAdminLogin();
     }
 
-    public FilesManagement(File file) {
+    public FilesManagement(File file, UserInformation userInformation) {
         this.userFile = file;
+        this.userInformation = userInformation;
     }
+
+
 
     public void clearAdminFile() {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(adminFile));) {
@@ -88,6 +94,20 @@ public class FilesManagement {
             System.out.println(line);
         }
         bufferedReader.close();
+    }
+
+    //ADMIN
+    //USER
+
+    public void saveToFile(String fileName){
+        File saveUsers = new File(fileName);
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(saveUsers, true));
+            bufferedWriter.write("1 - " + userInformation.getName().get(1)); //como saber qual é?
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 

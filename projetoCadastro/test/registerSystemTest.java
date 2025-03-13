@@ -1,6 +1,7 @@
 package academy.devdojo.maratonajava.projetoCadastro.test;
 
 import academy.devdojo.maratonajava.projetoCadastro.domain.FilesManagement;
+import academy.devdojo.maratonajava.projetoCadastro.domain.UserInformation;
 import academy.devdojo.maratonajava.projetoCadastro.domain.UserManagement;
 
 import java.io.File;
@@ -12,8 +13,9 @@ public class registerSystemTest {
         Scanner scanner = new Scanner(System.in);
         File userFile = new File("Formulario.txt");
         File adminFile = new File("LoginsAdmins.txt");
-        UserManagement userManagement = new UserManagement(userFile);
-        FilesManagement filesManagement = new FilesManagement(userFile,adminFile);
+        UserInformation userInformation = new UserInformation();
+        UserManagement userManagement = new UserManagement(userFile, userInformation);
+        FilesManagement filesManagement = new FilesManagement(userFile,adminFile, userInformation);
         filesManagement.fileUserCheck();
         filesManagement.clearUserFile();
 
@@ -22,9 +24,9 @@ public class registerSystemTest {
         try {
             filesManagement.writeUserToFile(
                     "1 - Qual seu nome completo?\n" +
-                    "2 - Qual seu email de contato?\n" +
-                    "3 - Qual sua idade?\n" +
-                    "4 - Qual sua altura");
+                            "2 - Qual seu email de contato?\n" +
+                            "3 - Qual sua idade?\n" +
+                            "4 - Qual sua altura");
         } catch (IOException e) {
             e.printStackTrace();
         }
