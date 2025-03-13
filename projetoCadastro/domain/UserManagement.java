@@ -8,12 +8,13 @@ import java.util.Scanner;
 public class UserManagement {
     private final File userFile;
     private final FilesManagement filesManagement;
-    UserInformation userInformation = null;
+    private UserInformation userInformation;
     private Scanner scanner;
 
-    public UserManagement(File file) {
+    public UserManagement(File file, UserInformation userInformation) {
         this.userFile = file;
-        this.filesManagement = new FilesManagement(file);
+        this.filesManagement = new FilesManagement(file, userInformation);
+        this.userInformation = userInformation;
         this.scanner = new Scanner(System.in);
     }
 
@@ -81,29 +82,50 @@ public class UserManagement {
     }
 
 
-    private String formatResponse(String prompt, String regex) {
+    private boolean formatResponse(String prompt, String regex) {
         String response;
-        System.out.println(prompt);
         response = scanner.nextLine();
 
         while (!response.matches(regex)) {
             System.out.println("Entrada inválida! Responda corretamente.");
-            System.out.println(prompt);
             response = scanner.nextLine();
         }
 
-        return response;
+        return true;
     }
 
     private void newUserRegister() {
-        ArrayList<String> response = new ArrayList<>();
+        ArrayList<String> formattedResponse = new ArrayList<>();
         String conteudoLinha;
 
-        for (int i = 1; i <= filesManagement.countLines(userFile); i++) {
-                conteudoLinha = filesManagement.readUserFileLine(i);
-                System.out.println(conteudoLinha);
-                response.add(scanner.nextLine());
+        int count = filesManagement.countLines(userFile);
+
+        for (int i = 1; i <= count; i++) {
+            conteudoLinha = filesManagement.readUserFileLine(i);
+            System.out.println(conteudoLinha);
+            String responseString = scanner.nextLine().trim();
+
+            while (responseString.isEmpty()) {
+                System.out.println("Resposta não pode estar vazia! Digite novamente:");
+                responseString = scanner.nextLine().trim();
+            }
+
+
+            formattedResponse.add(i + " - " + responseString);
+
         }
+
+        userInformation.getName().add(formattedResponse.get(0));
+        formatResponse(formattedResponse.get(1), "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+        userInformation.getEmail().add(formattedResponse.get(1));
+        formatResponse(formattedResponse.get(2), "^[0-9]+$");
+        int age = Integer.parseInt(formattedResponse.get(2));
+        userInformation.getAge().add(age);
+        formatResponse(formattedResponse.get(3), "^[0-9]\\.\\d{2}$");
+        double height = Double.parseDouble(formattedResponse.get(3));
+        userInformation.getHeight().add(height);
+
+        //automatizar perguntas
 
     }
 
