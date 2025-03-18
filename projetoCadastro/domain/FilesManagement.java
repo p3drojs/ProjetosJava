@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class FilesManagement {
     private static File userFile;
     private static File adminFile;
+    private static file userInformationFile;
     private UserInformation userInformation;
 
 
@@ -22,6 +23,9 @@ public class FilesManagement {
     }
 
 
+    public void setUserInformation(UserInformation userInformation) {
+        this.userInformation = userInformation;
+    }
 
     public void clearAdminFile() {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(adminFile));) {
@@ -99,17 +103,28 @@ public class FilesManagement {
     //ADMIN
     //USER
 
-    public void saveToFile(String fileName){
-        File saveUsers = new File(fileName);
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(saveUsers, true));
-            bufferedWriter.write("1 - " + userInformation.getName().get(1)); //como saber qual é?
-        } catch (IOException e) {
-            e.printStackTrace();
+    private void createUserRegisterFile(){
+        userInformationFile = new File("userInformationFile.txt");
+        if (!userInformationFile.exists()) {
+            try {
+                userInformationFile.createNewFile();
+                return;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+           return;
         }
-
     }
 
+    public void writeNewUserToFile(String response){
+        createUserRegisterFile();
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userInformationFile, true))){
+            bufferedWriter.write(response);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
     public void fileUserCheck() {
         if (!userFile.exists()) {

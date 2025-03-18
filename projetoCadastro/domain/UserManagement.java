@@ -18,6 +18,10 @@ public class UserManagement {
         this.scanner = new Scanner(System.in);
     }
 
+    public void setUserInformation(UserInformation userInformation) {
+        this.userInformation = userInformation;
+    }
+
     public void mainMenu() {
         String response;
         System.out.println("BEM VINDO AO SISTEMA DE CADASTROS!");

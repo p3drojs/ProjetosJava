@@ -13,9 +13,14 @@ public class registerSystemTest {
         Scanner scanner = new Scanner(System.in);
         File userFile = new File("Formulario.txt");
         File adminFile = new File("LoginsAdmins.txt");
-        UserInformation userInformation = new UserInformation();
-        UserManagement userManagement = new UserManagement(userFile, userInformation);
-        FilesManagement filesManagement = new FilesManagement(userFile,adminFile, userInformation);
+
+        UserManagement userManagement = new UserManagement(userFile, null);
+        FilesManagement filesManagement = new FilesManagement(userFile,adminFile, null);
+        UserInformation userInformation = new UserInformation(filesManagement, userManagement);
+
+        filesManagement.setUserInformation(userInformation);
+        userManagement.setUserInformation(userInformation);
+
         filesManagement.fileUserCheck();
         filesManagement.clearUserFile();
 
