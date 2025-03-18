@@ -3,25 +3,18 @@ package academy.devdojo.maratonajava.projetoCadastro.domain;
 import java.util.ArrayList;
 
 public class UserInformation {
-    private ArrayList<String> name = new ArrayList<>();
-    private ArrayList<String> email = new ArrayList<>();
-    private ArrayList<Integer> age = new ArrayList<>();
-    private ArrayList<Double> height = new ArrayList<>();
+    private ArrayList<String> response = new ArrayList<>();
 
-
-    public ArrayList<String> getName() {
-        return name;
+    public void formatResponse(String name, String height, String age, String email){
+        this.response.add(String.format("1-%s, %s, %s, %s:",name,height,age,email);
     }
 
-    public ArrayList<String> getEmail() {
-        return email;
+    private void saveUserToFile(){
+        for (int i = 0; response.size)
     }
 
-    public ArrayList<Integer> getAge() {
-        return age;
-    }
 
-    public ArrayList<Double> getHeight() {
-        return height;
+    public ArrayList<String> getResponse() {
+        return response;
     }
 }

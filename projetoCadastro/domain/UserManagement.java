@@ -111,19 +111,21 @@ public class UserManagement {
             }
 
 
-            formattedResponse.add(i + " - " + responseString);
+            formattedResponse.add(responseString);
 
         }
 
-        userInformation.getName().add(formattedResponse.get(0));
+
         formatResponse(formattedResponse.get(1), "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-        userInformation.getEmail().add(formattedResponse.get(1));
         formatResponse(formattedResponse.get(2), "^[0-9]+$");
-        int age = Integer.parseInt(formattedResponse.get(2));
-        userInformation.getAge().add(age);
         formatResponse(formattedResponse.get(3), "^[0-9]\\.\\d{2}$");
-        double height = Double.parseDouble(formattedResponse.get(3));
-        userInformation.getHeight().add(height);
+
+
+
+        for (int i = 1; <= formattedResponse.size(); i++){
+            userInformation.formatResponse(formattedResponse.get(i))
+        }
+
 
         //automatizar perguntas
 
