@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.projetoCadastro.domain;
+package projetoCadastro.domain;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -6,19 +6,19 @@ import java.util.ArrayList;
 public class FilesManagement {
     private static File userFile;
     private static File adminFile;
-    private static file userInformationFile;
+    private static File userInformationFile;
     private UserInformation userInformation;
 
 
     public FilesManagement(File file, File adminFile, UserInformation userInformation) {
-        this.userFile = file;
-        this.adminFile = adminFile;
+        userFile = file;
+        FilesManagement.adminFile = adminFile;
         this.userInformation = userInformation;
         writeBaseAdminLogin();
     }
 
     public FilesManagement(File file, UserInformation userInformation) {
-        this.userFile = file;
+        userFile = file;
         this.userInformation = userInformation;
     }
 
@@ -28,7 +28,7 @@ public class FilesManagement {
     }
 
     public void clearAdminFile() {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(adminFile));) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(adminFile))) {
             bufferedWriter.write("");
         } catch (IOException e) {
             e.printStackTrace();
@@ -103,8 +103,8 @@ public class FilesManagement {
     //ADMIN
     //USER
 
-    private void createUserRegisterFile(){
-        userInformationFile = new File("userInformationFile.txt");
+    private void createUserRegisterFile(String archiveName){
+        userInformationFile = new File(archiveName + ".txt");
         if (!userInformationFile.exists()) {
             try {
                 userInformationFile.createNewFile();
@@ -113,12 +113,12 @@ public class FilesManagement {
                 e.printStackTrace();
             }
         } else {
-           return;
+
         }
     }
 
     public void writeNewUserToFile(String response){
-        createUserRegisterFile();
+        createUserRegisterFile("pedro");
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userInformationFile, true))){
             bufferedWriter.write(response);
         }catch (IOException e){
@@ -136,11 +136,34 @@ public class FilesManagement {
         }
     }
 
-    public void writeUserToFile(String content) throws IOException {
+    private boolean checkQuestionsInFile(String content){
+        if (!userFile.exists()) {
+            return false;
+        }
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(userFile))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.trim().equalsIgnoreCase(content.trim())) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public void writeUserQuestionsToFile(String content) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userFile, true));
-        bufferedWriter.write(content);
-        bufferedWriter.newLine();
-        bufferedWriter.close();
+        if (checkQuestionsInFile(content)) return;
+        else{
+            bufferedWriter.write(content);
+            bufferedWriter.newLine();
+            bufferedWriter.close();
+        }
+
     }
 
     public int countLines(File file) {
@@ -192,7 +215,7 @@ public class FilesManagement {
     }
 
     public void clearUserFile() {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userFile));) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userFile))) {
             bufferedWriter.write("");
         } catch (IOException e) {
             e.printStackTrace();

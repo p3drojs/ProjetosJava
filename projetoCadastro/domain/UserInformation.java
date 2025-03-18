@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.projetoCadastro.domain;
+package projetoCadastro.domain;
 
 import java.util.ArrayList;
 
@@ -8,17 +8,24 @@ public class UserInformation {
     private UserManagement userManagement;
 
 
-    public UserInformation(FIlesManagement fIlesManagement, UserManagement userManagement) {
+    public UserInformation(FilesManagement filesManagement, UserManagement userManagement) {
         this.userManagement = userManagement;
         this.filesManagement = filesManagement;
     }
 
-    public saveUserToFile() {
-        filesManagement.writeNewUserToFile(this.response);
+    public void saveUserToFile() {
+        for (int i = 0; i < response.size(); i++) {
+            filesManagement.writeNewUserToFile(response.get(i));
+        }
     }
 
-    public void formatResponse(String name, String height, String age, String email){
-        this.response.add(String.format("1-%s, %s, %s, %s:",name,height,age,email);
+    public void formatResponse(ArrayList<ArrayList<String>> respostas){
+        for (int i = 0; i < respostas.size(); i++) {
+            ArrayList<String> respostaAtual = respostas.get(i);
+            String respostaFormatada = (i + 1) + " - " + String.join(", ", respostaAtual) + ":";
+            this.response.add(respostaFormatada);
+            saveUserToFile();
+        }
     }
 
     public ArrayList<String> getResponse() {

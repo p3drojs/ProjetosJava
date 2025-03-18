@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d38bfa5-0ab1-482e-baf1-c52a9cc4abd8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ProjetosJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetosJava.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Formulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Formulario.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" afterDir="false" />
@@ -25,14 +27,17 @@
     &quot;assignee&quot;: &quot;p3drojs&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:/p3drojs/ProjetosJava.git&quot;,
-    &quot;accountId&quot;: &quot;949e79fa-fe78-45ce-aaae-69ef4bbc8cd4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/p3drojs/ProjetosJava.git",
+    "accountId": "8743472a-e458-47ef-a577-2ad542b1d5da"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -42,19 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.registerSystemTest.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,5 +75,90 @@
       <workItem from="1741785378333" duration="6000" />
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
+          <line>105</line>
+          <properties class="projetoCadastro.domain.FilesManagement" method="createUserRegisterFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
+          <line>119</line>
+          <properties class="projetoCadastro.domain.FilesManagement" method="writeNewUserToFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>15</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="saveUserToFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>10</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>93</line>
+          <properties class="projetoCadastro.domain.UserManagement" method="formatResponse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>21</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="formatResponse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

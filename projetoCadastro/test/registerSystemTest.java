@@ -1,8 +1,8 @@
-package academy.devdojo.maratonajava.projetoCadastro.test;
+package projetoCadastro.test;
 
-import academy.devdojo.maratonajava.projetoCadastro.domain.FilesManagement;
-import academy.devdojo.maratonajava.projetoCadastro.domain.UserInformation;
-import academy.devdojo.maratonajava.projetoCadastro.domain.UserManagement;
+import projetoCadastro.domain.FilesManagement;
+import projetoCadastro.domain.UserInformation;
+import projetoCadastro.domain.UserManagement;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,10 +24,8 @@ public class registerSystemTest {
         filesManagement.fileUserCheck();
         filesManagement.clearUserFile();
 
-        //armazenar respostas e concatenar elas
-
         try {
-            filesManagement.writeUserToFile(
+            filesManagement.writeUserQuestionsToFile(
                     "1 - Qual seu nome completo?\n" +
                             "2 - Qual seu email de contato?\n" +
                             "3 - Qual sua idade?\n" +
