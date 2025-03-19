@@ -103,6 +103,28 @@ public class FilesManagement {
     //ADMIN
     //USER
 
+    public void excludeQuestion(int whichQuestion){
+        ArrayList<String> linhas = new ArrayList<>();
+        String linha;
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(userFile))){
+            while ((linha = bufferedReader.readLine()) != null){
+                linhas.add(linha);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        linhas.remove(whichQuestion - 1);
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userFile))) {
+            for(String l : linhas ){
+                bufferedWriter.write(l);
+                bufferedWriter.newLine();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        System.out.println("A mensagem " + whichQuestion +" excluida com sucesso!!");
+    }
+
     private void createUserRegisterFile(String archiveName){
         userInformationFile = new File(archiveName + ".txt");
         if (!userInformationFile.exists()) {
@@ -117,8 +139,8 @@ public class FilesManagement {
         }
     }
 
-    public void writeNewUserToFile(String response){
-        createUserRegisterFile("pedro");
+    public void writeNewUserToFile(String response, String content){
+        createUserRegisterFile(content);
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(userInformationFile, true))){
             bufferedWriter.write(response);
         }catch (IOException e){

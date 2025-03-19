@@ -45,16 +45,19 @@ public class UserManagement {
                 newUserRegister();
                 break;
             case "2":
-
                 break;
             case "3":
 
                 break;
             case "4":
-
+                addNewQuestion();
                 break;
             case "5":
-
+                if (filesManagement.countLines(userFile) <= 4){
+                    System.out.println("Não é permitido excluir nenhuma pergunta! Adicione uma primeira!");
+                    addNewQuestion();
+                }
+                excludeQuestion();
                 break;
         }
     }
@@ -85,9 +88,35 @@ public class UserManagement {
             if (validate(adminName, adminPassword)) {
                 mainMenu();
             }
-        } else if (userResponse.equals("0")) {
-
         }
+    }
+
+    private void excludeQuestion(){
+        String whichQuestion;
+        try {
+            filesManagement.readUserFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Qual pergunta vc gostaria de excluir?(Não pode excluir nenhuma pergunta base(1-4))");
+        whichQuestion = scanner.nextLine();
+        formatResponse(whichQuestion,"^[5-9]\\d*$|^[1-9]\\d{2,}$", "A RESPOSTA NÃO PODE ESTAR ENTRE 1 E 4 E TEM DE RESPONDER");
+        filesManagement.excludeQuestion(Integer.parseInt(whichQuestion));
+        mainMenu();
+    }
+
+    private void addNewQuestion(){
+        String ask;
+        System.out.println("Digite a pergunta que vc deseja adicionar!");
+        ask = scanner.nextLine();
+        formatResponse(ask,"^[A-Za-zÀ-ÿ\\s?]+$", "A PERGUNTA DEVE CONTER APENAS NUMEROS/NÃO PODE ESTAR VAZIA");
+        String i = String.valueOf(filesManagement.countLines(userFile) + 1);
+        try {
+            filesManagement.writeUserQuestionsToFile( i + " - " + ask);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mainMenu();
     }
 
 
@@ -129,10 +158,8 @@ public class UserManagement {
                 System.out.println("Resposta não pode estar vazia! Digite novamente:");
                 resposta = scanner.nextLine().trim();
             }
-
             formattedResponse.add(resposta);
         }
-
 
         formatResponse(formattedResponse.get(1), "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", "Email Invalido!, Digite Novamente!");
         formatResponse(formattedResponse.get(2), "^[0-9]+$", "Idade invalida, Digite somente Numeros!");
@@ -141,8 +168,8 @@ public class UserManagement {
         ArrayList<ArrayList<String>> wrappedResponse = new ArrayList<>();
         wrappedResponse.add(formattedResponse);
 
-        userInformation.formatResponse(wrappedResponse);
-
+        userInformation.formatResponse(wrappedResponse, formattedResponse.get(0));
+        //checar usuario existente, checar salvar em arquivo
         mainMenu();
     }
 

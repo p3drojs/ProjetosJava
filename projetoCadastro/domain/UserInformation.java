@@ -13,18 +13,18 @@ public class UserInformation {
         this.filesManagement = filesManagement;
     }
 
-    public void saveUserToFile() {
-        for (int i = 0; i < response.size(); i++) {
-            filesManagement.writeNewUserToFile(response.get(i));
+    public void saveUserToFile(String content) {
+        for (String s : response) {
+            filesManagement.writeNewUserToFile(s,content);
         }
     }
 
-    public void formatResponse(ArrayList<ArrayList<String>> respostas){
+    public void formatResponse(ArrayList<ArrayList<String>> respostas, String content){
         for (int i = 0; i < respostas.size(); i++) {
             ArrayList<String> respostaAtual = respostas.get(i);
             String respostaFormatada = (i + 1) + " - " + String.join(", ", respostaAtual) + ":";
             this.response.add(respostaFormatada);
-            saveUserToFile();
+            saveUserToFile(content);
         }
     }
 

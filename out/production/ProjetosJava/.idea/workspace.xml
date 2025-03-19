@@ -7,6 +7,7 @@
     <list default="true" id="7d38bfa5-0ab1-482e-baf1-c52a9cc4abd8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/ProjetosJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjetosJava.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Formulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Formulario.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" afterDir="false" />
@@ -48,7 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.registerSystemTest.executor": "Run",
+    "Application.registerSystemTest.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -74,5 +75,90 @@
       <workItem from="1741785378333" duration="6000" />
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
+          <line>105</line>
+          <properties class="projetoCadastro.domain.FilesManagement" method="createUserRegisterFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
+          <line>119</line>
+          <properties class="projetoCadastro.domain.FilesManagement" method="writeNewUserToFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>15</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="saveUserToFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>10</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>93</line>
+          <properties class="projetoCadastro.domain.UserManagement" method="formatResponse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>21</line>
+          <properties class="projetoCadastro.domain.UserInformation" method="formatResponse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
