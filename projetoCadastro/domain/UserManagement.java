@@ -31,35 +31,42 @@ public class UserManagement {
         System.out.println("BEM VINDO AO SISTEMA DE CADASTROS!");
         System.out.println("----------------------------------------");
         do {
-            System.out.println("1 - Cadastrar novo usuario:");
-            System.out.println("2 - Editar usuario:");
-            System.out.println("3 - Excluir usuario:");
-            System.out.println("4 - Adicionar nova pergunta:");
-            System.out.println("5 - Excluir pergunta:");
-            response = scanner.nextLine();
-            System.out.println("----------------------------------------");
-        } while (!response.matches("[1-5]"));
+            do {
+                System.out.println("1 - Cadastrar novo usuario:");
+                System.out.println("2 - Editar usuario:");
+                System.out.println("3 - Excluir usuario:");
+                System.out.println("4 - Adicionar nova pergunta:");
+                System.out.println("5 - Excluir pergunta:");
+                System.out.println("6 - Adicionar novo Admin");
+                System.out.println("7 - Excluir Admin");
+                System.out.println("8 - Sair do sistema");
+                response = scanner.nextLine();
+                System.out.println("----------------------------------------");
+            } while (!response.matches("[1-7]"));
+            switch (response) {
+                case "1":
+                    newUserRegister();
+                    break;
+                case "2":
+                    break;
+                case "3":
 
-        switch (response) {
-            case "1":
-                newUserRegister();
-                break;
-            case "2":
-                break;
-            case "3":
-
-                break;
-            case "4":
-                addNewQuestion();
-                break;
-            case "5":
-                if (filesManagement.countLines(userFile) <= 4){
-                    System.out.println("Não é permitido excluir nenhuma pergunta! Adicione uma primeira!");
+                    break;
+                case "4":
                     addNewQuestion();
-                }
-                excludeQuestion();
-                break;
-        }
+                    break;
+                case "5":
+                    if (filesManagement.countLines(userFile) <= 4) {
+                        System.out.println("Não é permitido excluir nenhuma pergunta base! Adicione uma primeira!");
+                        addNewQuestion();
+                    }
+                    excludeQuestion();
+                    break;
+                case "6":
+
+                    break;
+            }
+        } while (!response.equals("8"));
     }
 
     private boolean validate(String name, String password) {
@@ -91,7 +98,7 @@ public class UserManagement {
         }
     }
 
-    private void excludeQuestion(){
+    private void excludeQuestion() {
         String whichQuestion;
         try {
             filesManagement.readUserFile();
@@ -100,19 +107,19 @@ public class UserManagement {
         }
         System.out.println("Qual pergunta vc gostaria de excluir?(Não pode excluir nenhuma pergunta base(1-4))");
         whichQuestion = scanner.nextLine();
-        formatResponse(whichQuestion,"^[5-9]\\d*$|^[1-9]\\d{2,}$", "A RESPOSTA NÃO PODE ESTAR ENTRE 1 E 4 E TEM DE RESPONDER");
+        formatResponse(whichQuestion, "^[5-9]\\d*$|^[1-9]\\d{2,}$", "A RESPOSTA NÃO PODE ESTAR ENTRE 1 E 4 E TEM DE RESPONDER");
         filesManagement.excludeQuestion(Integer.parseInt(whichQuestion));
         mainMenu();
     }
 
-    private void addNewQuestion(){
+    private void addNewQuestion() {
         String ask;
         System.out.println("Digite a pergunta que vc deseja adicionar!");
         ask = scanner.nextLine();
-        formatResponse(ask,"^[A-Za-zÀ-ÿ\\s?]+$", "A PERGUNTA DEVE CONTER APENAS NUMEROS/NÃO PODE ESTAR VAZIA");
+        formatResponse(ask, "^[A-Za-zÀ-ÿ\\s?]+$", "A PERGUNTA DEVE CONTER APENAS NUMEROS/NÃO PODE ESTAR VAZIA");
         String i = String.valueOf(filesManagement.countLines(userFile) + 1);
         try {
-            filesManagement.writeUserQuestionsToFile( i + " - " + ask);
+            filesManagement.writeUserQuestionsToFile(i + " - " + ask);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -121,7 +128,7 @@ public class UserManagement {
 
 
     private boolean formatResponse(String prompt, String regex, String ask) {
-        if (prompt.matches(regex)){
+        if (prompt.matches(regex)) {
             return true;
         }
 
@@ -169,7 +176,7 @@ public class UserManagement {
         wrappedResponse.add(formattedResponse);
 
         userInformation.formatResponse(wrappedResponse, formattedResponse.get(0));
-        //checar usuario existente, checar salvar em arquivo
+        //checar usuario existente
         mainMenu();
     }
 

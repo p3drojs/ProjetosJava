@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d38bfa5-0ab1-482e-baf1-c52a9cc4abd8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Formulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Formulario.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetosJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetosJava/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetosJava/Formulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetosJava/Formulario.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/FilesManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/FilesManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/UserInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/UserInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/UserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetosJava/projetoCadastro/domain/UserManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pedro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,23 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.registerSystemTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.registerSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,26 +75,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
-          <line>21</line>
-          <properties class="projetoCadastro.domain.UserInformation" method="formatResponse">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserInformation.java</url>
-          <line>15</line>
-          <properties class="projetoCadastro.domain.UserInformation" method="saveUserToFile">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
-          <line>179</line>
+          <line>201</line>
           <properties class="projetoCadastro.domain.FilesManagement" method="writeUserQuestionsToFile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -112,7 +85,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
-          <line>160</line>
+          <line>182</line>
           <properties class="projetoCadastro.domain.FilesManagement" method="checkQuestionsInFile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -121,8 +94,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
-          <line>107</line>
-          <properties class="projetoCadastro.domain.UserManagement" method="addNewQuestion">
+          <line>143</line>
+          <properties class="projetoCadastro.domain.UserManagement">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -130,21 +103,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/projetoCadastro/domain/UserManagement.java</url>
-          <line>93</line>
-          <properties class="projetoCadastro.domain.UserManagement" method="excludeQuestion">
+          <line>129</line>
+          <properties class="projetoCadastro.domain.UserManagement" method="formatResponse">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/projetoCadastro/domain/FilesManagement.java</url>
-          <line>105</line>
-          <properties class="projetoCadastro.domain.FilesManagement" method="excludeQuestion">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
